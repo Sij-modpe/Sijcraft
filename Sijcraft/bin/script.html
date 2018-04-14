@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<body> <script>
+ (function () {
+
+var Lib;
+var Jdk;
+var Android;
+var getJS=[];
+//Java的io流操作类型API   lib/SijViewJAVAIO.js
+importLib("SijViewJAVAIO", "*");
+
+
+
+//添加物品   add more items
+
+
+IDRegistry.genItemID("anjin");
+Item.createItem("anjin", "暗金锭", {name: "Anj",meta:0
+				}, {
+					stack:64
+				});
+IDRegistry.genItemID("lan");
+Item.createItem("lan", "蓝水晶", {name: "Lan",meta:0
+				}, {stack:64});
+IDRegistry.genItemID("hei");
+Item.createItem("hei", "黑钛金", {name: "Hei",meta:0
+				}, {stack:64});
+IDRegistry.genItemID("xue");
+Item.createItem("xue", "混沌之血", {name: "Xue",meta:0
+				}, {stack:64});
+IDRegistry.genItemID("book");
+Item.createItem("book", "颂世录", {name: "Book",meta:0
+				}, {stack:64});
+IDRegistry.genItemID("dark");
+Item.createItem("dark", "黑暗之剑", {name: "Dark",meta:0
+				}, {stack:64});
+
+IDRegistry.genItemID("glass");
+Item.createItem("glass", "玻璃之剑", {name: "Glass",meta:0
+				}, {stack:64});
+IDRegistry.genItemID("xili");
+Item.createItem("xili", "暗金洗礼", {name: "Xili",meta:0
+				}, {stack:64});
+
+IDRegistry.genItemID("yi");
+Item.createItem("yi", "以太之剑", {name: "Yi",meta:0
+				}, {stack:64});
+IDRegistry.genItemID("xie");
+Item.createItem("xie", "邪恶起源", {name: "Xie",meta:0,
+				}, {stack:64});
+
+
+//设定物品的特殊属性
+Item.describeItem("dark", {
+					  toolRender: true, // 是否为物品为工具形态
+					  maxDamage: 20, //设置最大耐久度
+				  });
+
+Item.describeItem("glass", {
+					  toolRender: true, // 是否为物品为工具形态
+					  maxDamage: 10, //设置最大耐久度
+				  });
+
+Item.describeItem("xili", {
+					  toolRender: true, // 是否为物品为工具形态
+					  maxDamage: 30, //设置最大耐久度
+				  });
+
+
+Item.describeItem("yi", {
+					  toolRender: true, // 是否为物品为工具形态
+					  maxDamage: 30, //设置最大耐久度
+				  });
+
+Item.describeItem("xie", {
+					  toolRender: true, // 是否为物品为工具形态
+					  maxDamage: 40, //设置最大耐久度
+				  });
+
+
+
+var 合成={
+
+
+	普通剑合成:function(id,数量,X1id,X2id) {
+
+
+		Recipes.addShaped({id: id, count: 数量, data: 0}, [
+							  " x ",
+							  " x ",
+							  " b "
+							  
+						  ], [ 'x', X1id, 0, 'b', X2id, 0]);
+
+	}
+
+
+
+}	  
+				  
+				  
+				  
+
+
+
+
+
+
+
+
+
+				  
+				  
+				  
+/*
+var tex=["Anj","Hei","Lan","Xue","Book","Dark","Glass","Xie","Xili","Yi"];
+var id=["anjin","hei","lan","xue","book","dark","glass","xie","xili","yi"];
+var name=["暗金锭","黑钛金","蓝水晶","混沌之血","颂世录","黑暗之剑","玻璃之剑","邪恶之剑","暗金洗礼","以太之间"];
+*/
+
+
+})();alert('$$$FINISHED$$$');
+</script> </body>
